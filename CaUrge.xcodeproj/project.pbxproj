@@ -10,7 +10,6 @@
 		57BC93842C6F903000A74139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC93832C6F903000A74139 /* AppDelegate.swift */; };
 		57BC93862C6F903000A74139 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC93852C6F903000A74139 /* SceneDelegate.swift */; };
 		57BC93882C6F903000A74139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC93872C6F903000A74139 /* ViewController.swift */; };
-		57BC938B2C6F903000A74139 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 57BC938A2C6F903000A74139 /* Base */; };
 		57BC938D2C6F903300A74139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57BC938C2C6F903300A74139 /* Assets.xcassets */; };
 		57BC93902C6F903300A74139 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 57BC938F2C6F903300A74139 /* Base */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		57BC93832C6F903000A74139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57BC93852C6F903000A74139 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57BC93872C6F903000A74139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		57BC938A2C6F903000A74139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57BC938C2C6F903300A74139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57BC938F2C6F903300A74139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57BC93912C6F903300A74139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 				57BC93832C6F903000A74139 /* AppDelegate.swift */,
 				57BC93852C6F903000A74139 /* SceneDelegate.swift */,
 				57BC93872C6F903000A74139 /* ViewController.swift */,
-				57BC93892C6F903000A74139 /* Main.storyboard */,
 				57BC938C2C6F903300A74139 /* Assets.xcassets */,
 				57BC938E2C6F903300A74139 /* LaunchScreen.storyboard */,
 				57BC93912C6F903300A74139 /* Info.plist */,
@@ -127,7 +124,6 @@
 			files = (
 				57BC938D2C6F903300A74139 /* Assets.xcassets in Resources */,
 				57BC93902C6F903300A74139 /* Base in Resources */,
-				57BC938B2C6F903000A74139 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		57BC93892C6F903000A74139 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57BC938A2C6F903000A74139 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		57BC938E2C6F903300A74139 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,11 +283,12 @@
 				DEVELOPMENT_TEAM = T8DKX94TR7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CaUrge/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ça Urge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +312,12 @@
 				DEVELOPMENT_TEAM = T8DKX94TR7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CaUrge/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ça Urge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
