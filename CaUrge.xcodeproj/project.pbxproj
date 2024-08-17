@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576CB3102C70F7B400ADE7BB /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 576CB30F2C70F7B400ADE7BB /* swiftlint.yml */; };
 		57BC93842C6F903000A74139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC93832C6F903000A74139 /* AppDelegate.swift */; };
 		57BC93862C6F903000A74139 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC93852C6F903000A74139 /* SceneDelegate.swift */; };
 		57BC93882C6F903000A74139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC93872C6F903000A74139 /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		576CB30F2C70F7B400ADE7BB /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		57BC93802C6F903000A74139 /* CaUrge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaUrge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BC93832C6F903000A74139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57BC93852C6F903000A74139 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				57BC93832C6F903000A74139 /* AppDelegate.swift */,
 				57BC93852C6F903000A74139 /* SceneDelegate.swift */,
 				57BC93872C6F903000A74139 /* ViewController.swift */,
+				576CB30F2C70F7B400ADE7BB /* swiftlint.yml */,
 				57BC938C2C6F903300A74139 /* Assets.xcassets */,
 				57BC938E2C6F903300A74139 /* LaunchScreen.storyboard */,
 				57BC93912C6F903300A74139 /* Info.plist */,
@@ -74,12 +77,15 @@
 				57BC937C2C6F903000A74139 /* Sources */,
 				57BC937D2C6F903000A74139 /* Frameworks */,
 				57BC937E2C6F903000A74139 /* Resources */,
+				576CB30D2C70F53D00ADE7BB /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CaUrge;
+			packageProductDependencies = (
+			);
 			productName = CaUrge;
 			productReference = 57BC93802C6F903000A74139 /* CaUrge.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +114,9 @@
 				Base,
 			);
 			mainGroup = 57BC93772C6F902F00A74139;
+			packageReferences = (
+				576CB30E2C70F68F00ADE7BB /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+			);
 			productRefGroup = 57BC93812C6F903000A74139 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -123,11 +132,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				57BC938D2C6F903300A74139 /* Assets.xcassets in Resources */,
+				576CB3102C70F7B400ADE7BB /* swiftlint.yml in Resources */,
 				57BC93902C6F903300A74139 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		576CB30D2C70F53D00ADE7BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFT_PACKAGE_DIR=\"${BUILD_DIR%Build/*}SourcePackages/artifacts\"\nSWIFTLINT_CMD=$(ls \"$SWIFT_PACKAGE_DIR\"/swiftlintplugins/SwiftLintBinary/SwiftLintBinary.artifactbundle/swiftlint-*/bin/swiftlint | head -n 1)\n\nif test -f \"$SWIFTLINT_CMD\" 2>&1\nthen\n    \"$SWIFTLINT_CMD\" --fix && \"$SWIFTLINT_CMD\"\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		57BC937C2C6F903000A74139 /* Sources */ = {
@@ -281,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T8DKX94TR7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CaUrge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Ça Urge";
@@ -310,6 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T8DKX94TR7;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CaUrge/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Ça Urge";
@@ -353,6 +387,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		576CB30E2C70F68F00ADE7BB /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 57BC93782C6F902F00A74139 /* Project object */;
 }
